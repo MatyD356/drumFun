@@ -74,12 +74,16 @@ class App extends React.Component {
     } else {
       handle.innerHTML = "OFF"
       handle.style.right = "0"
+      document.getElementById('display').innerHTML = null
     }
   }
   chandleVolume() {
+    let val = document.getElementById("volume").value / 100
+    val < 0 ? val = 0 : val > 1 ? val = 1 : console.log()
     this.setState({
-      volume: document.getElementById("volume").value / 100
+      volume: val
     })
+    document.getElementById('display').innerHTML = this.state.volume * 100
   }
   render() {
     return (
@@ -102,7 +106,12 @@ class App extends React.Component {
             </div>
           </div>
           <div id="display" className="display"> </div>
-
+          <div className="volume-handle">
+            <p className="volume-title">Volume</p>
+            <input id="volume" className="slider" type="range" min="-10" max="110" step="10" onChange={
+              this.chandleVolume.bind(this)
+            } />
+          </div>
         </div>
       </div>
     );

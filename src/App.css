@@ -93,19 +93,16 @@
 /* slider */
 .slider {
   margin: 25px;
-  width: 90%;
   box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.5);
 }
 input[type="range"].slider {
-  -webkit-appearance: none;
-  width: 90%;
   margin: 1.5px 0;
   border-radius: 15px;
 }
 input[type="range"].slider::-moz-range-thumb {
   border: 0px solid #ff1e00;
-  height: 23px;
-  width: 37px;
+  height: 20px;
+  width: 30px;
   border-radius: 15px;
   background: rgba(40, 44, 52, 0.93);
   cursor: pointer;
