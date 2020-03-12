@@ -57,12 +57,6 @@ class App extends React.Component {
       ]
     };
   }
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
-    document.body.appendChild(script);
-  }
   chandlePoower() {
     this.setState({
       power: !this.state.power
